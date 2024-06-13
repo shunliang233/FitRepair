@@ -1,0 +1,67 @@
+\section{要求}
+\begin{itemize}
+	\item 由于线路数据获取源不同，需要分别讨论不同的交通方式，最终统一将获取的原始数据整理为 GPX 运动文件。
+	\item 要求描述线路的坐标串需要有一定的密度，不能仅显示站点的坐标信息，需要将站点之间的路线也描述出来。
+\end{itemize}
+
+
+\section{飞机}
+\subsection{数据获取}
+\begin{itemize}
+	\item 在民航领域，飞机的飞行数据主要是为飞行安全服务的，因此飞行数据检测系统大多都专注与实时检测。
+	\item 主要有地面雷达系统和飞机自身的数据收集系统来记录分型数据，其中雷达观测数据一般不对外开放。
+	\item 飞机自身使用 GPS 和高度计等设备记录的飞行数据会通过 ADS-B 广播系统实时发送到地面。
+	\item 只要飞机经过地面 ADS-B 接收站的覆盖区域，地面就能实时监控飞机飞行数据。
+	\item 由于 ADS-B 接受站的成本比雷达站低很多，因此世界各国都在地面建设全覆盖的 ADS-B 接收站。
+	\item 另外 ADS-B 数据公开环境也比雷达数据要好得多，有很多网站会汇总航班的 ADS-B 数据并对外提供服务。
+	\item 在这些网站上，大多只要输入航班就能获得全程的飞行数据，包括可以用来制作 GPX 文件的位置时间数据。
+	\begin{itemize}
+		\item 国内的 FlightADSB 可以获取 JSON 和 CSV 格式的飞行数据，限制 1 年内的航班。
+		\item 美国的 FlightAware 可以获取 KML 格式的飞行数据，限制 3 个月内，更久的数据需要支付高昂的费用。
+		\item 非盈利性的 The OpenSky 提供了 Python API, 可以批量获取数据，还没有试过。
+	\end{itemize}
+	\item 注册并登录 FlightADSB 账号，找到轨迹查询，输入航班号和日期，在条目中会显示航班简要信息，并提供数据下载渠道。
+\end{itemize}
+
+
+\section{公交地铁}
+\subsection{数据获取}
+\begin{itemize}
+	\item 网上现成的公交地铁线路坐标数据库大多都只含有站点的坐标信息，而没有站点间的线路坐标信息。
+	\item 在百度地图和高德地图上查询地铁线路，可以看到站点之间的线路形状，说明地图公司拥有站点间坐标信息。
+	\item 经过查看文档，发现在高德地图 API 中，使用``公交信息查询''功能可以获得整条公交地铁线路的坐标串。
+	\item 不用百度地图，因为考虑到百度地图提供的坐标是特殊的百度坐标 (BD09)，而高德地图提供的坐标仅为火星坐标 (GCJ02).
+	\item 高德地图 API 的使用教程在官网上比较详尽，这里就简单说明一下。
+	\begin{itemize}
+		\item 在高德地图开放平台 (\url{https://lbs.amap.com/}) 注册并认证成为个人开发者。
+		\item 进入控制台，创建一个新的应用，选择应用类型为 Web API, 并创建一个 Key.
+		\item 查阅 Web API 文档可知，使用服务原理是向高德服务器发送 HTTP GET 请求，获取相关的数据。
+		\item 对于 Python 有 \verb|requests| 非标准库包可以发送 HTTP 请求并解析返回结果。
+	\end{itemize}
+\end{itemize}
+
+\subsection{查询线路 ID}
+\begin{itemize}
+	\item 高德使用 \verb|id| 唯一确定一条公共交通线路，对向发车的算两条不同的线路。
+	\item 因此需要先使用自然语言查询，手动筛选出需要的线路的 ID，再使用该 ID 查询出线路信息，并保存到数据库中。
+	\item 高德提供的公交路线关键字查询功能返回的信息量过于庞大，手动筛选只需要少量信息即可，因此要对高德的输出进行筛选。
+\end{itemize}
+
+\subsection{使用路径 ID 修复坐标串}
+
+
+\subsection{修复运动轨迹}
+\begin{itemize}
+	\item 原始运动轨迹过于密集
+	\item 原始运动轨迹过于稀疏
+	
+\end{itemize}
+
+
+
+\section{12306火车}
+\begin{itemize}
+	\item 
+	
+\end{itemize}
+
