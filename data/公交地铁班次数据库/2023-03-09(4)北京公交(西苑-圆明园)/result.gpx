@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <trkseg>
+      <trkpt lat="39.9970158" lon="116.2848476">
+        <time>2023-03-09T07:06:44</time>
+      </trkpt>
+      <trkpt lat="39.9966947" lon="116.2857024">
+        <time>2023-03-09T07:07:02.934209</time>
+      </trkpt>
+      <trkpt lat="39.9964935" lon="116.2862712">
+        <time>2023-03-09T07:07:15.442630</time>
+      </trkpt>
+      <trkpt lat="39.9962923" lon="116.2868399">
+        <time>2023-03-09T07:07:27.951050</time>
+      </trkpt>
+      <trkpt lat="39.9960910" lon="116.2874086">
+        <time>2023-03-09T07:07:40.459470</time>
+      </trkpt>
+      <trkpt lat="39.9958898" lon="116.2879773">
+        <time>2023-03-09T07:07:52.967891</time>
+      </trkpt>
+      <trkpt lat="39.9957874" lon="116.2882898">
+        <time>2023-03-09T07:07:59.787531</time>
+      </trkpt>
+      <trkpt lat="39.9957181" lon="116.2885165">
+        <time>2023-03-09T07:08:04.702220</time>
+      </trkpt>
+      <trkpt lat="39.9956728" lon="116.2887132">
+        <time>2023-03-09T07:08:08.887532</time>
+      </trkpt>
+      <trkpt lat="39.9956526" lon="116.2888660">
+        <time>2023-03-09T07:08:12.082802</time>
+      </trkpt>
+      <trkpt lat="39.9956514" lon="116.2890667">
+        <time>2023-03-09T07:08:16.244261</time>
+      </trkpt>
+      <trkpt lat="39.9956700" lon="116.2893233">
+        <time>2023-03-09T07:08:21.578961</time>
+      </trkpt>
+      <trkpt lat="39.9956937" lon="116.2895529">
+        <time>2023-03-09T07:08:26.365844</time>
+      </trkpt>
+      <trkpt lat="39.9957379" lon="116.2901450">
+        <time>2023-03-09T07:08:38.676551</time>
+      </trkpt>
+      <trkpt lat="39.9958008" lon="116.2908973">
+        <time>2023-03-09T07:08:54.329340</time>
+      </trkpt>
+      <trkpt lat="39.9958637" lon="116.2916496">
+        <time>2023-03-09T07:09:09.982130</time>
+      </trkpt>
+      <trkpt lat="39.9959266" lon="116.2924019">
+        <time>2023-03-09T07:09:25.634920</time>
+      </trkpt>
+      <trkpt lat="39.9959896" lon="116.2931542">
+        <time>2023-03-09T07:09:41.287710</time>
+      </trkpt>
+      <trkpt lat="39.9960287" lon="116.2937252">
+        <time>2023-03-09T07:09:53.155874</time>
+      </trkpt>
+      <trkpt lat="39.9960829" lon="116.2946327">
+        <time>2023-03-09T07:10:12.004847</time>
+      </trkpt>
+      <trkpt lat="39.9961370" lon="116.2955401">
+        <time>2023-03-09T07:10:30.853819</time>
+      </trkpt>
+      <trkpt lat="39.9961997" lon="116.2960732">
+        <time>2023-03-09T07:10:41.982718</time>
+      </trkpt>
+      <trkpt lat="39.9962624" lon="116.2966062">
+        <time>2023-03-09T07:10:53.111617</time>
+      </trkpt>
+      <trkpt lat="39.9964424" lon="116.2972246">
+        <time>2023-03-09T07:11:06.465632</time>
+      </trkpt>
+      <trkpt lat="39.9966224" lon="116.2978430">
+        <time>2023-03-09T07:11:19.819648</time>
+      </trkpt>
+      <trkpt lat="39.9968697" lon="116.2985871">
+        <time>2023-03-09T07:11:36.078245</time>
+      </trkpt>
+      <trkpt lat="39.9971170" lon="116.2993312">
+        <time>2023-03-09T07:11:52.336842</time>
+      </trkpt>
+      <trkpt lat="39.9973358" lon="116.3000543">
+        <time>2023-03-09T07:12:08.001886</time>
+      </trkpt>
+      <trkpt lat="39.9975547" lon="116.3007774">
+        <time>2023-03-09T07:12:23.666930</time>
+      </trkpt>
+      <trkpt lat="39.9977737" lon="116.3016253">
+        <time>2023-03-09T07:12:41.824215</time>
+      </trkpt>
+      <trkpt lat="39.9979928" lon="116.3024731">
+        <time>2023-03-09T07:12:59.981501</time>
+      </trkpt>
+      <trkpt lat="39.9981517" lon="116.3031298">
+        <time>2023-03-09T07:13:13.990750</time>
+      </trkpt>
+      <trkpt lat="39.9983106" lon="116.3037865">
+        <time>2023-03-09T07:13:28</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <trkseg>
+      <trkpt lat="23.1337446" lon="113.3160971">
+        <time>2024-01-23T13:02:53</time>
+      </trkpt>
+      <trkpt lat="23.1330159" lon="113.3160737">
+        <time>2024-01-23T13:03:06.325552</time>
+      </trkpt>
+      <trkpt lat="23.1322873" lon="113.3160503">
+        <time>2024-01-23T13:03:19.651103</time>
+      </trkpt>
+      <trkpt lat="23.1317600" lon="113.3160279">
+        <time>2024-01-23T13:03:29.296939</time>
+      </trkpt>
+      <trkpt lat="23.1312328" lon="113.3160054">
+        <time>2024-01-23T13:03:38.942775</time>
+      </trkpt>
+      <trkpt lat="23.1304612" lon="113.3159601">
+        <time>2024-01-23T13:03:53.070693</time>
+      </trkpt>
+      <trkpt lat="23.1296896" lon="113.3159147">
+        <time>2024-01-23T13:04:07.198610</time>
+      </trkpt>
+      <trkpt lat="23.1291663" lon="113.3159048">
+        <time>2024-01-23T13:04:16.764789</time>
+      </trkpt>
+      <trkpt lat="23.1286430" lon="113.3158948">
+        <time>2024-01-23T13:04:26.330968</time>
+      </trkpt>
+      <trkpt lat="23.1281197" lon="113.3158849">
+        <time>2024-01-23T13:04:35.897148</time>
+      </trkpt>
+      <trkpt lat="23.1275965" lon="113.3158750">
+        <time>2024-01-23T13:04:45.463327</time>
+      </trkpt>
+      <trkpt lat="23.1270687" lon="113.3158648">
+        <time>2024-01-23T13:04:55.111780</time>
+      </trkpt>
+      <trkpt lat="23.1265409" lon="113.3158546">
+        <time>2024-01-23T13:05:04.760232</time>
+      </trkpt>
+      <trkpt lat="23.1260132" lon="113.3158444">
+        <time>2024-01-23T13:05:14.408684</time>
+      </trkpt>
+      <trkpt lat="23.1254854" lon="113.3158342">
+        <time>2024-01-23T13:05:24.057137</time>
+      </trkpt>
+      <trkpt lat="23.1249704" lon="113.3158270">
+        <time>2024-01-23T13:05:33.471849</time>
+      </trkpt>
+      <trkpt lat="23.1244553" lon="113.3158198">
+        <time>2024-01-23T13:05:42.886561</time>
+      </trkpt>
+      <trkpt lat="23.1239403" lon="113.3158126">
+        <time>2024-01-23T13:05:52.301274</time>
+      </trkpt>
+      <trkpt lat="23.1234253" lon="113.3158054">
+        <time>2024-01-23T13:06:01.715986</time>
+      </trkpt>
+      <trkpt lat="23.1227016" lon="113.3158014">
+        <time>2024-01-23T13:06:14.944106</time>
+      </trkpt>
+      <trkpt lat="23.1219779" lon="113.3157975">
+        <time>2024-01-23T13:06:28.172226</time>
+      </trkpt>
+      <trkpt lat="23.1211522" lon="113.3158005">
+        <time>2024-01-23T13:06:43.264102</time>
+      </trkpt>
+      <trkpt lat="23.1206449" lon="113.3157945">
+        <time>2024-01-23T13:06:52.536977</time>
+      </trkpt>
+      <trkpt lat="23.1201376" lon="113.3157884">
+        <time>2024-01-23T13:07:01.809852</time>
+      </trkpt>
+      <trkpt lat="23.1196304" lon="113.3157823">
+        <time>2024-01-23T13:07:11.082727</time>
+      </trkpt>
+      <trkpt lat="23.1191231" lon="113.3157762">
+        <time>2024-01-23T13:07:20.355601</time>
+      </trkpt>
+      <trkpt lat="23.1186158" lon="113.3157701">
+        <time>2024-01-23T13:07:29.628476</time>
+      </trkpt>
+      <trkpt lat="23.1181085" lon="113.3157641">
+        <time>2024-01-23T13:07:38.901351</time>
+      </trkpt>
+      <trkpt lat="23.1176012" lon="113.3157580">
+        <time>2024-01-23T13:07:48.174226</time>
+      </trkpt>
+      <trkpt lat="23.1170940" lon="113.3157519">
+        <time>2024-01-23T13:07:57.447100</time>
+      </trkpt>
+      <trkpt lat="23.1164072" lon="113.3157540">
+        <time>2024-01-23T13:08:09.999229</time>
+      </trkpt>
+      <trkpt lat="23.1160204" lon="113.3157680">
+        <time>2024-01-23T13:08:17.075108</time>
+      </trkpt>
+      <trkpt lat="23.1156365" lon="113.3157939">
+        <time>2024-01-23T13:08:24.107993</time>
+      </trkpt>
+      <trkpt lat="23.1152006" lon="113.3158369">
+        <time>2024-01-23T13:08:32.114057</time>
+      </trkpt>
+      <trkpt lat="23.1147286" lon="113.3159048">
+        <time>2024-01-23T13:08:40.828952</time>
+      </trkpt>
+      <trkpt lat="23.1143007" lon="113.3159677">
+        <time>2024-01-23T13:08:48.735001</time>
+      </trkpt>
+      <trkpt lat="23.1138247" lon="113.3160635">
+        <time>2024-01-23T13:08:57.609719</time>
+      </trkpt>
+      <trkpt lat="23.1133556" lon="113.3162172">
+        <time>2024-01-23T13:09:06.632538</time>
+      </trkpt>
+      <trkpt lat="23.1129324" lon="113.3164159">
+        <time>2024-01-23T13:09:15.177424</time>
+      </trkpt>
+      <trkpt lat="23.1126091" lon="113.3166434">
+        <time>2024-01-23T13:09:22.403706</time>
+      </trkpt>
+      <trkpt lat="23.1123418" lon="113.3168820">
+        <time>2024-01-23T13:09:28.952484</time>
+      </trkpt>
+      <trkpt lat="23.1120695" lon="113.3171305">
+        <time>2024-01-23T13:09:35.691549</time>
+      </trkpt>
+      <trkpt lat="23.1117010" lon="113.3174508">
+        <time>2024-01-23T13:09:44.615987</time>
+      </trkpt>
+      <trkpt lat="23.1112556" lon="113.3177772">
+        <time>2024-01-23T13:09:54.709154</time>
+      </trkpt>
+      <trkpt lat="23.1110755" lon="113.3178651">
+        <time>2024-01-23T13:09:58.371519</time>
+      </trkpt>
+      <trkpt lat="23.1108544" lon="113.3179499">
+        <time>2024-01-23T13:10:02.699607</time>
+      </trkpt>
+      <trkpt lat="23.1106114" lon="113.3180068">
+        <time>2024-01-23T13:10:07.261472</time>
+      </trkpt>
+      <trkpt lat="23.1103495" lon="113.3180368">
+        <time>2024-01-23T13:10:12.080627</time>
+      </trkpt>
+      <trkpt lat="23.1101325" lon="113.3180487">
+        <time>2024-01-23T13:10:16.051831</time>
+      </trkpt>
+      <trkpt lat="23.1099476" lon="113.3180527">
+        <time>2024-01-23T13:10:19.432839</time>
+      </trkpt>
+      <trkpt lat="23.1097537" lon="113.3180558">
+        <time>2024-01-23T13:10:22.977883</time>
+      </trkpt>
+      <trkpt lat="23.1090959" lon="113.3180558">
+        <time>2024-01-23T13:10:35</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

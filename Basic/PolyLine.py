@@ -13,6 +13,7 @@ from datetime import datetime
 
 from pykml import parser
 import json
+import gpxpy
 
 from Coordinate import Location
 from Coordinate import System
@@ -96,7 +97,21 @@ class PolyLine():
         
         _coords = np.array(coord_list)
         return cls(_coords)
-                
+    
+    @classmethod
+    def gpx(cls, file: str):
+        """从设备记录的 gpx 文件获取位置信息"""
+        coord_list = []
+        with open(file, 'r', encoding='utf-8') as f:
+            gpx = gpxpy.parse(f)
+        for track in gpx.tracks:
+            for segment in track.segments:
+                for point in segment.points:
+                    loc = Location(point.longitude, point.latitude)
+                    coord = Coordinate(loc, point.elevation, point.time)
+                    coord_list.append(coord)
+        _coords = np.array(coord_list)
+        return cls(_coords)
     
     def add_times(self, start_time: datetime, end_time: datetime):
         """根据提供的起始和结束时间，为坐标添加时间信息"""
@@ -121,6 +136,72 @@ class PolyLine():
             coord_list.append(coord)
         self._coords = np.array(coord_list)
     
+    def analytical(self):
+        """
+        增加 PolyLine 的坐标点密度到 1m
+        用于和设备记录的 GPS 轨迹进行匹配
+        """
+        coord_list = list(self._coords)
+        index = 0
+        pre_coord = coord_list[index]
+        while index != len(coord_list):
+            cur_coord = coord_list[index]
+            if cur_coord.distance(pre_coord) > 0.00001: # 1m
+                coord_list.insert(index, cur_coord.middle(pre_coord))
+            else:
+                pre_coord = cur_coord
+                index += 1
+        self._anas = np.array(coord_list)
+    
+    def repair(self, polyline):
+        """
+        根据 polyline, 对 self 中的轨迹进行修复
+        先将 self 中的每个点匹配到 polyline_ana 中距离最近的点上
+        """
+        coords_measure = list(self._coords)
+        coords_ana = list(polyline._anas)
+        coords = []
+        for coord in coords_measure:
+            min_index = 0
+            min_distance = coord.distance(coords_ana[min_index])
+            index = 0
+            while index != len(coords_ana):
+                if coord.distance(coords_ana[index]) < min_distance:
+                    min_index = index
+                    min_distance = coord.distance(coords_ana[min_index])
+                index += 1
+            coord = Coordinate.change_loc(coord, coords_ana[min_index])
+            coords.append(coord)
+        
+        """
+        然后再往 self 点集中插入 polyline._coords 中的点，以防 self 中的点有间断
+        通过总距离的大小来判断应该将 polyline._coords 中的点插入到 self 中的位置
+        """
+        reals_distance = 0
+        pre_real = polyline._coords[0]
+        for real in polyline._coords:
+            reals_distance += real.distance(pre_real)
+            index = 0
+            coords_distance = 0
+            pre_coord = coords[index]
+            while index != len(coords):
+                coords_distance += coords[index].distance(pre_coord)
+                if reals_distance < coords_distance:
+                    coords.insert(index, real)
+                    break
+                elif reals_distance == coords_distance:
+                    break
+                pre_coord = coords[index]
+                index += 1
+            # 如果 while 是正常结束的，就需要把 real 插入到 coords 的末尾
+            if index == len(coords):
+                coords.append(real)            
+            pre_real = real
+
+        # """最后再给没有时间的 coord 点补充时间和高度信息"""
+        # for coord in coords:
+            
+        self._coords = np.array(coords)
     
     @property
     def lon(self):

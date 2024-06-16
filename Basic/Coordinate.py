@@ -60,6 +60,12 @@ class Coordinate:
         self._ele = ele
         self._time = time
     
+    @classmethod
+    def change_loc(cls, coord1, coord2):
+        """将 coord1 的 loc 替换为 coord2 的"""
+        loc = Location(coord2.lon, coord2.lat)
+        return cls(loc, coord1._ele, coord1._time)
+    
     """外部函数"""
     def distance(self, other):
         return math.hypot(self.lon - other.lon, self.lat - other.lat)
@@ -70,10 +76,18 @@ class Coordinate:
         loc = Location(lon, lat)
         if self._ele and other._ele:
             ele = 0.5 * (self._ele + other._ele)
+        elif self._ele and not other._ele:
+            ele = self._ele
+        elif not self._ele and other._ele:
+            ele = other._ele
         else:
             ele = None
         if self._time and other._time:
             time = other._time + 0.5 * (self._time - other._time)
+        elif self._time and not other._time:
+            time = self._time
+        elif not self._time and other._time:
+            time = other._time
         else:
             time = None
         return Coordinate(loc, ele, time)

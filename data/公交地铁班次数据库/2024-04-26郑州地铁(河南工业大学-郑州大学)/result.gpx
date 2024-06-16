@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <trkseg>
+      <trkpt lat="34.8276308" lon="113.5360019">
+        <time>2024-04-26T14:00:13</time>
+      </trkpt>
+      <trkpt lat="34.8271200" lon="113.5359877">
+        <time>2024-04-26T14:00:38.797121</time>
+      </trkpt>
+      <trkpt lat="34.8266093" lon="113.5359734">
+        <time>2024-04-26T14:01:04.594241</time>
+      </trkpt>
+      <trkpt lat="34.8260985" lon="113.5359592">
+        <time>2024-04-26T14:01:30.391362</time>
+      </trkpt>
+      <trkpt lat="34.8255878" lon="113.5359450">
+        <time>2024-04-26T14:01:56.188482</time>
+      </trkpt>
+      <trkpt lat="34.8248742" lon="113.5359280">
+        <time>2024-04-26T14:02:32.224652</time>
+      </trkpt>
+      <trkpt lat="34.8241607" lon="113.5359110">
+        <time>2024-04-26T14:03:08.260822</time>
+      </trkpt>
+      <trkpt lat="34.8234472" lon="113.5358940">
+        <time>2024-04-26T14:03:44.296992</time>
+      </trkpt>
+      <trkpt lat="34.8227336" lon="113.5358770">
+        <time>2024-04-26T14:04:20.333162</time>
+      </trkpt>
+      <trkpt lat="34.8219014" lon="113.5358438">
+        <time>2024-04-26T14:05:02.384100</time>
+      </trkpt>
+      <trkpt lat="34.8210692" lon="113.5358105">
+        <time>2024-04-26T14:05:44.435038</time>
+      </trkpt>
+      <trkpt lat="34.8202370" lon="113.5357772">
+        <time>2024-04-26T14:06:26.485976</time>
+      </trkpt>
+      <trkpt lat="34.8194048" lon="113.5357439">
+        <time>2024-04-26T14:07:08.536914</time>
+      </trkpt>
+      <trkpt lat="34.8192020" lon="113.5357339">
+        <time>2024-04-26T14:07:18.789162</time>
+      </trkpt>
+      <trkpt lat="34.8184902" lon="113.5357134">
+        <time>2024-04-26T14:07:54.742346</time>
+      </trkpt>
+      <trkpt lat="34.8177784" lon="113.5356929">
+        <time>2024-04-26T14:08:30.695530</time>
+      </trkpt>
+      <trkpt lat="34.8170371" lon="113.5356694">
+        <time>2024-04-26T14:09:08.140907</time>
+      </trkpt>
+      <trkpt lat="34.8162958" lon="113.5356459">
+        <time>2024-04-26T14:09:45.586284</time>
+      </trkpt>
+      <trkpt lat="34.8157133" lon="113.5356079">
+        <time>2024-04-26T14:10:15.058120</time>
+      </trkpt>
+      <trkpt lat="34.8151309" lon="113.5355698">
+        <time>2024-04-26T14:10:44.529955</time>
+      </trkpt>
+      <trkpt lat="34.8145484" lon="113.5355317">
+        <time>2024-04-26T14:11:14.001791</time>
+      </trkpt>
+      <trkpt lat="34.8139659" lon="113.5354937">
+        <time>2024-04-26T14:11:43.473626</time>
+      </trkpt>
+      <trkpt lat="34.8130188" lon="113.5354629">
+        <time>2024-04-26T14:12:31.316339</time>
+      </trkpt>
+      <trkpt lat="34.8120717" lon="113.5354322">
+        <time>2024-04-26T14:13:19.159052</time>
+      </trkpt>
+      <trkpt lat="34.8111246" lon="113.5354014">
+        <time>2024-04-26T14:14:07.001765</time>
+      </trkpt>
+      <trkpt lat="34.8101775" lon="113.5353707">
+        <time>2024-04-26T14:14:54.844478</time>
+      </trkpt>
+      <trkpt lat="34.8096630" lon="113.5353296">
+        <time>2024-04-26T14:15:20.907083</time>
+      </trkpt>
+      <trkpt lat="34.8091479" lon="113.5353000">
+        <time>2024-04-26T14:15:46.953541</time>
+      </trkpt>
+      <trkpt lat="34.8086329" lon="113.5352705">
+        <time>2024-04-26T14:16:13</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <trkseg>
+      <trkpt lat="39.9827721" lon="116.2259171">
+        <time>2022-10-29T01:46:25</time>
+      </trkpt>
+      <trkpt lat="39.9830557" lon="116.2255445">
+        <time>2022-10-29T01:46:39.410085</time>
+      </trkpt>
+      <trkpt lat="39.9835412" lon="116.2248734">
+        <time>2022-10-29T01:47:04.899101</time>
+      </trkpt>
+      <trkpt lat="39.9840266" lon="116.2242023">
+        <time>2022-10-29T01:47:30.388117</time>
+      </trkpt>
+      <trkpt lat="39.9845121" lon="116.2235312">
+        <time>2022-10-29T01:47:55.877133</time>
+      </trkpt>
+      <trkpt lat="39.9849976" lon="116.2228600">
+        <time>2022-10-29T01:48:21.366149</time>
+      </trkpt>
+      <trkpt lat="39.9854830" lon="116.2221889">
+        <time>2022-10-29T01:48:46.855165</time>
+      </trkpt>
+      <trkpt lat="39.9859685" lon="116.2215178">
+        <time>2022-10-29T01:49:12.344181</time>
+      </trkpt>
+      <trkpt lat="39.9864540" lon="116.2208467">
+        <time>2022-10-29T01:49:37.833198</time>
+      </trkpt>
+      <trkpt lat="39.9869394" lon="116.2201755">
+        <time>2022-10-29T01:50:03.322214</time>
+      </trkpt>
+      <trkpt lat="39.9873204" lon="116.2196676">
+        <time>2022-10-29T01:50:22.859944</time>
+      </trkpt>
+      <trkpt lat="39.9877013" lon="116.2191597">
+        <time>2022-10-29T01:50:42.397674</time>
+      </trkpt>
+      <trkpt lat="39.9879640" lon="116.2188341">
+        <time>2022-10-29T01:50:55.270634</time>
+      </trkpt>
+      <trkpt lat="39.9882156" lon="116.2185546">
+        <time>2022-10-29T01:51:06.845371</time>
+      </trkpt>
+      <trkpt lat="39.9885283" lon="116.2182430">
+        <time>2022-10-29T01:51:20.428504</time>
+      </trkpt>
+      <trkpt lat="39.9889308" lon="116.2178332">
+        <time>2022-10-29T01:51:38.104760</time>
+      </trkpt>
+      <trkpt lat="39.9895302" lon="116.2173202">
+        <time>2022-10-29T01:52:02.383009</time>
+      </trkpt>
+      <trkpt lat="39.9898729" lon="116.2170296">
+        <time>2022-10-29T01:52:16.208311</time>
+      </trkpt>
+      <trkpt lat="39.9900427" lon="116.2168873">
+        <time>2022-10-29T01:52:23.026142</time>
+      </trkpt>
+      <trkpt lat="39.9901925" lon="116.2167260">
+        <time>2022-10-29T01:52:29.800695</time>
+      </trkpt>
+      <trkpt lat="39.9903942" lon="116.2164705">
+        <time>2022-10-29T01:52:39.817681</time>
+      </trkpt>
+      <trkpt lat="39.9906058" lon="116.2161629">
+        <time>2022-10-29T01:52:51.307287</time>
+      </trkpt>
+      <trkpt lat="39.9911428" lon="116.2153223">
+        <time>2022-10-29T01:53:22.003620</time>
+      </trkpt>
+      <trkpt lat="39.9915979" lon="116.2145608">
+        <time>2022-10-29T01:53:49.302767</time>
+      </trkpt>
+      <trkpt lat="39.9917864" lon="116.2142010">
+        <time>2022-10-29T01:54:01.800814</time>
+      </trkpt>
+      <trkpt lat="39.9919450" lon="116.2138714">
+        <time>2022-10-29T01:54:13.058199</time>
+      </trkpt>
+      <trkpt lat="39.9920358" lon="116.2136620">
+        <time>2022-10-29T01:54:20.081558</time>
+      </trkpt>
+      <trkpt lat="39.9921036" lon="116.2134876">
+        <time>2022-10-29T01:54:25.837984</time>
+      </trkpt>
+      <trkpt lat="39.9921623" lon="116.2132822">
+        <time>2022-10-29T01:54:32.412460</time>
+      </trkpt>
+      <trkpt lat="39.9922130" lon="116.2130106">
+        <time>2022-10-29T01:54:40.912770</time>
+      </trkpt>
+      <trkpt lat="39.9922535" lon="116.2126810">
+        <time>2022-10-29T01:54:51.133929</time>
+      </trkpt>
+      <trkpt lat="39.9922752" lon="116.2123974">
+        <time>2022-10-29T01:54:59.885538</time>
+      </trkpt>
+      <trkpt lat="39.9922877" lon="116.2119916">
+        <time>2022-10-29T01:55:12.379611</time>
+      </trkpt>
+      <trkpt lat="39.9922926" lon="116.2112150">
+        <time>2022-10-29T01:55:36.277670</time>
+      </trkpt>
+      <trkpt lat="39.9922911" lon="116.2104234">
+        <time>2022-10-29T01:56:00.638835</time>
+      </trkpt>
+      <trkpt lat="39.9922895" lon="116.2096317">
+        <time>2022-10-29T01:56:25</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
