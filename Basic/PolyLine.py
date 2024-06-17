@@ -174,9 +174,13 @@ class PolyLine():
             coords.append(coord)
         
         """
-        然后再往 self 点集中插入 polyline._coords 中的点，以防 self 中的点有间断
+        然后再往 self 点集合中插入 polyline._coords 中的点，以防 self 中的点有间断
         通过总距离的大小来判断应该将 polyline._coords 中的点插入到 self 中的位置
+        考虑到 coords 的起点可能与 polyline._coords 不同，
+        因此无论如何都要先把 polyline._coords 中的第一个点放到 coords 的第一个位置
         """
+        # if coords
+        
         reals_distance = 0
         pre_real = polyline._coords[0]
         for real in polyline._coords:
@@ -198,7 +202,7 @@ class PolyLine():
                 coords.append(real)            
             pre_real = real
 
-        # """最后再给没有时间的 coord 点补充时间和高度信息"""
+        """最后再给没有时间的 coord 点补充时间和高度信息"""
         # for coord in coords:
             
         self._coords = np.array(coords)
