@@ -44,12 +44,17 @@ class Coordinate:
     
     
     def __init__(self, loc: Location,
-                 ele: float | None = None,
                  time: datetime | None = None,
+                 ele: float | None = None,
+                 heart_rate: int | None = None,
+                 sequence: float | None = None,
+                 percent: int | float | None = None,
                  system: System=System.wgs84):
         """
         将 wgs84 和 gcj02 两个坐标都计算并存储下来，以便后续使用
         ele 和 time 即使没输入，也要存储下来, coord 特性输出的时候会判断是否有值
+            sequence 是坐标在 polyline 中的位置，整数代表原始坐标，非整数代表后续添加的坐标
+            percent 是坐标在 polyline 中的路程百分比
         """
         if system == System.wgs84:
             self._coord_wgs = loc
@@ -57,9 +62,44 @@ class Coordinate:
         elif system == System.gcj02:
             self._coord_wgs = self._gcj2wgs(loc)
             self._coord_gcj = loc
-        self._ele = ele
         self._time = time
+        self._ele = ele
+        self._heart_rate = heart_rate
+        self._sequence = sequence
+        self._percent = percent
     
+    @classmethod
+    def add_attr(cls, coord,
+                 time: datetime | None = None,
+                 ele: float | None = None,
+                 heart_rate: int | None = None,
+                 sequence: float | None = None,
+                 percent: int | float | None = None):
+        """
+        给 coord 对象增加属性，返回增加属性后的 Coordinate 实例
+        添加策略为：
+                  如果备选构造函数提供了，就用备选构造函数中的值；
+                  否则就使用 coord 中的原始值
+        """
+        _loc = Location(coord.lon, coord.lat)
+        _time = coord.time
+        _ele = coord.ele
+        _heart_rate = coord.heart_rate
+        _sequence = coord.sequence
+        _percent = coord.percent
+        if time != None:
+            _time = time
+        if ele != None:
+            _ele = ele
+        if heart_rate != None:
+            _heart_rate = heart_rate
+        if sequence != None:
+            _sequence = sequence
+        if percent != None:
+            _percent = percent
+        return cls(_loc, _time, _ele, _heart_rate, _sequence, _percent)
+        
+    # TODO: 删掉这个方法，可以用 add_attr 方法代替
     @classmethod
     def change_loc(cls, coord1, coord2):
         """将 coord1 的 loc 替换为 coord2 的"""
@@ -70,29 +110,84 @@ class Coordinate:
     def distance(self, other):
         return math.hypot(self.lon - other.lon, self.lat - other.lat)
     
+    def distance_meter(self, other):
+        R = 6371004 # Radius of Earth
+        d_lon = (self.lon - other.lon) * math.pi / 180
+        d_lat = (self.lat - other.lat) * math.pi / 180
+        lat1 = self.lat * math.pi / 180
+        lat2 = other.lat * math.pi / 180
+        a = math.sin(d_lat/2)**2 + math.cos(lat1)*math.cos(lat2)*math.sin(d_lon/2)**2
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a)) 
+        return R * c
+    
+    def del_time(self):
+        self._time = None
+        return self
+    
     def middle(self, other):
+        """要注意 0 也是有意义的值，应当使条件成立"""
         lon = 0.5 * (self.lon + other.lon)
         lat = 0.5 * (self.lat + other.lat)
         loc = Location(lon, lat)
-        if self._ele and other._ele:
+        if self._ele != None and other._ele != None:
             ele = 0.5 * (self._ele + other._ele)
-        elif self._ele and not other._ele:
+        elif self._ele != None and other._ele == None:
             ele = self._ele
-        elif not self._ele and other._ele:
+        elif self._ele == None and other._ele != None:
             ele = other._ele
         else:
             ele = None
-        if self._time and other._time:
+        if self._time != None and other._time != None:
             time = other._time + 0.5 * (self._time - other._time)
-        elif self._time and not other._time:
+        elif self._time != None and other._time == None:
             time = self._time
-        elif not self._time and other._time:
+        elif self._time == None and other._time != None:
             time = other._time
         else:
             time = None
-        return Coordinate(loc, ele, time)
+        if self._heart_rate != None and other._heart_rate != None:
+            heart_rate = round(0.5 * (self._heart_rate + other._heart_rate))
+        elif self._heart_rate != None and other._heart_rate == None:
+            heart_rate = self._heart_rate
+        elif self._heart_rate == None and other._heart_rate != None:
+            heart_rate = other._heart_rate
+        else:
+            heart_rate = None
+        if self._sequence != None and other._sequence != None:
+            sequence = 0.5 * (self._sequence + other._sequence)
+        elif self._sequence != None and other._sequence == None:
+            sequence = self._sequence
+        elif self._sequence == None and other._sequence != None:
+            sequence = other._sequence
+        else:
+            sequence = None
+        if self._percent != None and other._percent != None:
+            percent = 0.5 * (self._percent + other._percent)
+        elif self._percent != None and other._percent == None:
+            percent = self._percent
+        elif self._percent == None and other._percent != None:
+            percent = other._percent
+        else:
+            percent = None
+        return Coordinate(loc, time, ele, heart_rate, sequence, percent)
     
     """外部数据接口"""
+    @property
+    def time(self):
+        return self._time
+    @property
+    def ele(self):
+        return self._ele
+    @property
+    def heart_rate(self):
+        return self._heart_rate
+    @property
+    def sequence(self):
+        return self._sequence
+    @property
+    def percent(self):
+        return self._percent
+    
     @property
     def lon(self):
         return self._coord_wgs.lon
@@ -104,14 +199,7 @@ class Coordinate:
         return np.array([self.lon, self.lat])
     @property
     def coord(self):
-        if self._ele and self._time:
-            return np.array([self.lon, self.lat, self._ele, self._time])
-        elif self._ele:
-            return np.array([self.lon, self.lat, self._ele])
-        elif self._time:
-            return np.array([self.lon, self.lat, self._time])
-        else:
-            return np.array([self.lon, self.lat])
+        return np.array([self.lon, self.lat, self.time, self.ele, self.heart_rate])
     @property
     def lon_gcj(self):
         return self._coord_gcj.lon
@@ -124,7 +212,7 @@ class Coordinate:
     @property
     def coord_gcj(self):
         if self._ele and self._time:
-            return np.array([self.lon_gcj, self.lat_gcj, self._ele, self._time])
+            return np.array([self.lon_gcj, self.lat_gcj, self._time, self._ele])
         elif self._ele:
             return np.array([self.lon_gcj, self.lat_gcj, self._ele])
         elif self._time:
